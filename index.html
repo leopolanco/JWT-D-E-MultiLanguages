@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Apis for practice</title>
+	</head>
+	<body>
+		<h1>Welcome!</h1>
+		<h4>What do you want to do?</h4>
+		<select id="action-select">
+			<option value="decode">Decode JWT</option>
+			<option value="encode">Encode An Object</option>
+		</select>
+		<br />
+		<br />
+		<div id="contentarea" data-action="decode">
+			<textarea placeholder="Enter the encoded JWT" style="margin: 0px; width: 197px; height: 220px;"></textarea>
+		</div>
+		<br />
+		<h4>Select a language</h4>
+		<select id="language-select">
+			<option value="php">PHP</option>
+			<option value="python">Python</option>
+			<option value="go">Go</option>
+			<option value="rust">Rust</option>
+			<option value="c">C</option>
+			<option value="cpp">C++</option>
+			<option value="csharp">C#</option>
+			<option value="java">Java</option>
+			<option value="assembly">Assembly</option>
+		</select>
+		<button id="submit-btn">Go</button>
+		<br />
+		<br />
+		<div id="result"></div>
+
+		<script src="index.js"></script>
+	</body>
+</html>
