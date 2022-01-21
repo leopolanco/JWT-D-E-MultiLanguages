@@ -11,7 +11,7 @@ const selectChange = (e) => {
 	const contentArea = document.getElementById('contentarea')
 	contentArea.setAttribute('data-action', action)
 	contentArea.innerText = ''
-    document.getElementById('result').innerText = ''
+	document.getElementById('result').innerText = ''
 
 	if (action === 'decode') {
 		const area = document.createElement('textarea')
@@ -90,7 +90,7 @@ const postToEndpoint = async (action, data) => {
 	const url = `http://127.0.0.1:8080/${action}`
 	if (!data) return 'No data provided'
 	const jsonData = JSON.stringify(data)
-	console.log("SENDING THIS JSON -->", jsonData)
+	console.log('SENDING THIS JSON -->', jsonData)
 	try {
 		const res = await fetch(url, {
 			method: 'POST',
