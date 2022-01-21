@@ -89,13 +89,15 @@ const createKeyValueInput = (parent) => {
 const postToEndpoint = async (action, data) => {
 	const url = `http://127.0.0.1:8080/${action}`
 	if (!data) return 'No data provided'
+	const jsonData = JSON.stringify(data)
+	console.log("SENDING THIS JSON -->", jsonData)
 	try {
 		const res = await fetch(url, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify(data)
+			body: jsonData
 		})
 
 		return await res.json()
