@@ -87,7 +87,7 @@ const createKeyValueInput = (parent) => {
 }
 
 const postToEndpoint = async (action, data) => {
-	const url = `http://127.0.0.1:8000/${action}`
+	const url = `http://127.0.0.1:8080/${action}`
 	if (!data) return 'No data provided'
 	try {
 		const res = await fetch(url, {
