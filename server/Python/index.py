@@ -13,8 +13,9 @@ class Encode(Resource):
         try:
             key = 'secret'
             received_object = reqparse.request.get_json()
-            encoded_object = jwt.encode(received_object, key, algorithm='HS256').decode("utf-8")
-            return encoded_object
+            encoded_object = jwt.encode(received_object, key, algorithm='HS256')
+            # Decode here to be able to read it in client
+            return encoded_object.decode('utf-8')
 
         except Exception as e:
             print("Error on /encode: ", e)

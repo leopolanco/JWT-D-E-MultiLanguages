@@ -5,7 +5,7 @@ PHP ✅
 
 Go ✅
 
-Python
+Python ✅
 
 Rust
 
@@ -32,7 +32,7 @@ The second endpoint called "/decode" will receive a jwt and return its payload
 Algorithm for both is the same
 
 - Retrieve json from body
-- Convert it to readable language structure
+- Convert it to language readable string
 - Transform it
 - Check and catch errors
 - Convert to json
