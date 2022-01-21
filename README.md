@@ -36,4 +36,4 @@ Algorithm for both is the same
 - Transform it
 - Check and catch errors
 - Convert to json
-- Send status 200 and result
+- Send result
