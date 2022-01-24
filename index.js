@@ -90,7 +90,7 @@ const postToEndpoint = async (action, data) => {
 	const url = `http://127.0.0.1:8080/${action}`
 	if (!data) return 'No data provided'
 	const jsonData = JSON.stringify(data)
-	console.log('SENDING THIS JSON -->', jsonData)
+	console.log('SENDING -->', jsonData)
 	try {
 		const res = await fetch(url, {
 			method: 'POST',
@@ -99,8 +99,9 @@ const postToEndpoint = async (action, data) => {
 			},
 			body: jsonData
 		})
-
-		return await res.json()
+		const response = await res.json()
+		console.log("RECEIVED -->", response)
+		return response
 	} catch (error) {
 		console.error(error)
 		return 'Sorry there was an error'

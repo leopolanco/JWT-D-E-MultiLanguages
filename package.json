@@ -7,7 +7,7 @@
     "php": "php -S 127.0.0.1:8080 -t ./server/PHP",
     "go": "cd ./server/Go && go run index.go",
     "python": "python3 ./server/Python/index.py",
-    "rust": "cd ./server/Rust && rustc ./main.rs && ./main" 
+    "rust": "cd ./server/Rust && cargo run" 
   },
   "author": "",
   "license": "ISC"
