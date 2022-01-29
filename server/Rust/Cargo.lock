@@ -515,7 +515,6 @@ dependencies = [
  "rocket_codegen",
  "rocket_contrib",
  "rocket_cors",
- "serde",
  "serde_json",
 ]
 
